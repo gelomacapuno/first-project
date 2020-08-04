@@ -1,0 +1,127 @@
+%noMarginPadding {
+    margin: 0;
+    padding: 0;
+}
+%centered{
+    text-align: center;
+}
+$blueGreen :#16d9d2;
+$lightBG: #00fcf3;
+
+
+@media (min-width: 725px) {
+    #welcome::before {
+        content: "Welcome to my Website!";
+        }
+            }
+@media (max-width: 724px) {
+    #welcome::before {
+        content: "Welcome!";
+        }
+    a{
+        .name {
+        display: none;
+        }
+    } 
+            }
+body {
+    ::selection {
+    background: $lightBG;
+}
+        background-image: url(light-final.jpg);
+        @extend %noMarginPadding;
+}
+.header {
+    img{
+        width: 100%;
+    }
+}
+.nav {
+            top: 0;
+        position: sticky; 
+    ul {
+        
+        list-style-type: none;
+        background-color: black;
+        text-align: center;
+        @extend %noMarginPadding;
+        width: 100%;
+        opacity: 65%;
+        overflow: hidden;
+    }
+    li {
+        display: inline-block;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        font-size: 20px;
+        padding: 14px 21px;
+        transition: 0.4s;
+    }
+    a:hover {
+        background-color: $blueGreen;
+    }
+}
+#active {
+    background-color: $blueGreen;
+}
+#HOME {
+    @extend %centered;
+}
+.container {
+    h1 {
+        @extend %centered;
+    }
+    .figure {
+        @extend %centered;
+    }
+}
+#logoPic {
+    display: flex;
+    flex-wrap: wrap;
+    @extend %centered;
+    justify-content: center;
+    img {
+        width: 300px;
+        height: 300px;
+        padding: 20px;
+    }
+}
+#famPic {
+    display: flex;
+    flex-wrap: wrap;
+    @extend %centered;
+    justify-content: center;
+    img {
+        width: 500px;
+        height: 350px;
+        padding: 20px;
+    }
+}
+.media {
+    img {
+        width: 60%;
+        height: 40%;
+    }
+}
+#contact {
+    background-color: #c2c4d1;
+}
+#SocialMedia {
+    p {
+        font-size: 20px;
+    }
+}
+#Songs {
+    display: flex;
+    flex-wrap: wrap;
+    @extend %centered;
+    justify-content: center;
+    img {
+        width: 500px;
+        height: 350px;
+        padding: 20px;
+    }
+}
